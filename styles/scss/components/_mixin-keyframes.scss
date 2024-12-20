@@ -1,0 +1,19 @@
+// use as: @include flex(start, end, column);
+// or @include flex($justify-content: center, $flex-direction: column);
+@mixin flex($justify-content: center, $align-items: center, $flex-direction: row) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-direction: $flex-direction;
+}
+
+// use as: @include grid(1fr 1fr, 1fr 1fr, null, 1rem, .5rem);
+// or @include grid($rows: 1fr 1fr, $gap: 1rem);
+@mixin grid($columns: null, $rows: null, $gap: null, $column-gap: null, $row-gap: null) {
+  display: grid;
+  gap: $gap;
+  row-gap: $row-gap;
+  column-gap: $column-gap;
+  grid-template-rows: $rows;
+  grid-template-columns: $columns;
+}
